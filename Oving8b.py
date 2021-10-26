@@ -8,30 +8,25 @@ class MultipleChoise:
     def __init__(self, question, alternatives, answer):
         self.question = question
         self.answer = alternatives[answer]
-        self._alternatives = set(alternatives)
-        self._bad_answers = set()
+        self.alternatives = alternatives
         
-    @property
-    def remaining_alternatives(self):
-        return list(self._alternatives - self._bad_answers)
+    def __repr__(self) -> str:
+        return f"<MultipleChoise {self.question}>"
 
     def __str__(self):
         return f"{self.question}\n" + "\n".join(
             [
                 f"    {index + 1}: {alternative}"
-                for index, alternative in enumerate(self.remaining_alternatives)
+                for index, alternative in enumerate(self.alternatives)
             ]
         )
 
     def sjekk_svar(self, answer):
-        if answer is None or answer == "" or int(answer) < 1 or int(answer) > len(self.remaining_alternatives):
+        if answer is None or answer == "" or int(answer) < 1 or int(answer) > len(self.alternatives):
             print(f"{answer} er ikke gyldig!")
             return False
 
-        if self.answer == (alternative := self.remaining_alternatives[int(answer) -1]):
-            return True
-        self._bad_answers.add(alternative)
-        return False
+        return self.answer == (self.alternatives[int(answer) -1])
 
 #print(question.sjekk_svar(input(question)))
 
@@ -48,7 +43,7 @@ liste = [
     ),
 ]
 
-for element in liste:
+"""for element in liste:
     def ask_qestion():
         print(f"{element}\n")
         answer = input("Svar: ")
@@ -57,4 +52,4 @@ for element in liste:
         else:
             print("FEIL!\n")
             ask_qestion()
-    ask_qestion()
+    ask_qestion()"""
