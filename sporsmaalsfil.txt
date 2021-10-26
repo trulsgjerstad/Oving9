@@ -1,0 +1,8 @@
+Den delen av en datamaskin som kjører programmet kalles?: 2 :[RAM, Harddisk, CPU, Sekundærlager]
+En ___ er nok minne til å lagre en bokstav eller et lite heltall.: 1 : [bit, byte, bryter, transistor]
+En byte består av åtte ___ : 0 : [bits, instruksjoner, variabler, CPU-er]
+I hvilket tallsystem bruker man bare 0-ere eller 1-ere?: 2 : [heksadesimal, oktal, binær, desimal]
+Hvilket tall i titallssystemet er representert med det binære tallet 1011001?: 1 :[38, 89, 173, 1011001]
+Hvilket binært tall representerer tallet 23?: 1 : [1011, 10111, 11011, 101111, 111011]
+Datamaskiner kan bare utføre direkte programmer som er skrevet i ___ : 3 : [assembly, c, java, maskinkode, python]
+Python er et tolket eller kompilert språk?: 1 : [kompilert, tolket]
